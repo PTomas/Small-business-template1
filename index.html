@@ -22,9 +22,6 @@
         left:500px;
         right:-10px;
     }
-    a.link {
-        color:darkblue;
-    }
     a.hover{
         color:white;
     }
@@ -32,11 +29,14 @@
         color:white;
     }
     /* Float the list items side by side */
-    ul.tab li {float: right;}
+    ul.tab li {
+        float: right;
+        color: darkblue;
+    }
     /* Style the links inside the list items */
     ul.tab li a {
         display: inline-block;
-        color: gray;
+        color: darkblue;
         text-align: center;
         padding: 28px 20px;
         text-decoration: none;
@@ -46,6 +46,7 @@
     /* Change background color of links on hover */
     ul.tab li a:hover {
         background-color: darkblue;
+        color: white;
     }
     /* Create an active/current tablink class */
     ul.tab li a:focus, .active {
@@ -57,7 +58,7 @@
     /* Style the tab content */
     .tabcontent {
         display: none;
-        padding: 6px 0px;
+        padding: 6px 12px;
         position: absolute;
         top:75px;
         bottom:200px;
