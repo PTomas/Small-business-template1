@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    font-family: "Impact", charcoal, serif;
+    background-color: white;
+   
+}
+    
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 175px;
+    overflow: hidden;
+    border: 1px solid gray;
+    background-color: white;
+    position: absolute;
+    top:123px;
+    left:-10px;
+    right:-10px;
+}
+/* Float the list items side by side */
+ul.tab li {float: left;}
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: gray;
+    text-align: center;
+    padding: 28px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: darkblue;
+}
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: darkblue;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid darkblue;
+    position: absolute;
+    top:80px;
+    left:0px;
+    right:0px;
+    background-color: white;
+}
+    
+h1.serif {
+    font-family: "Arial Black", Gadget, sans-serif;
+}    
+    hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+</style>
+<body>
+    <div>
+        <img src="bottombar(sb).png" alt="info" style="width:1441px;height:60px;position:fixed;bottom:0px;left:0px;" >
+    </div>
+    
+<ul class="tab">
+  <li><a href="#" class="tablinks" onclick="openEvent(event, 'Home')"><font color="lightgray">Home</font></a></li>
+  <li><a href="#" class="tablinks" onclick="openEvent(event, 'About')"><font color="lightgray">About</font></a></li>
+  <li><a href="#" class="tablinks" onclick="openEvent(event, 'Products')"><font color="lightgray">Products</font></a></li>
+</ul>
+
+ <div id="Home" class="tabcontent">   
+    </div>
+    
+<div id="About" class="tabcontent">
+  <h3><font color="darkblue"><center>Who we are</center></font></h3>
+    <hr>
+    <p><b><font color="darkblue">History</font></b></p>
+        <p>A History of business.</p>
+        <p></p>
+    <p><b><font color="darkblue">Owner</font></b></p>
+        <p>About the owner</p>
+        <p></p>
+ </div>
+
+<div id="Products" class="tabcontent">
+  <h3><font color="darkblue"><center>Products</center></font></h3>
+    <hr>
+    <p><b><font color="darkblue">Photos</font></b></p>
+        <img src="item1.png" alt="project3a" style="width:200px; height:400px;">
+        <img src="item2.png" alt="project3b" style="width:200px; height:400px;">
+        <img src="item3.png" alt="project3c" style="width:200px; height:400px;">
+</div>
+  
+<script>
+function openEvent(evt, eventName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(eventName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script> 
+</body>
+</html> 
+
 
